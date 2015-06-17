@@ -1,0 +1,114 @@
+"외부 경로를 지정할 때는 다음과 같이 한다.
+"source C:\Users\Administrator.leejr-PC\git\myconfig\_vrapperrc
+
+" gvim 실행 파일 경로. 
+" 라인 오른쪽에 주석을 달아주면 주석도 옵션으로 평가하므로 주의. 
+set gvimpath=C:\Program Files (x86)\Vim\vim74\gvim.exe
+"set gvimpath=D:\vim73\gvim.exe
+
+
+
+set smartcase	" 대문자가 검색어 문자열에 포함될 때에는 noignorecase
+set ignorecase 	" 검색시 대소문자 무시
+set hlsearch	" 검색시 하이라이트(색상 강조)
+set incsearch	" 검색 키워드 입력시 한 글자 입력할 때마다 점진 검색
+
+set shiftwidth=1	" shift를 4칸으로 ( >, >>, <, << 등의 명령어)
+set tabstop=2		" tab을 4칸으로
+set sts=2
+"set noimd		" no imdisable 한글 입력기 관련
+set laststatus=2	" 상태바를 언제나 표시할 것
+set showmatch " 일치하는 괄호 하이라이팅
+set sm	" 매치되는 괄호 표시
+set history=1000 "  vi 편집기록 기억갯수 .viminfo에 기록
+
+" ESC 대용
+imap jk <Esc>
+imap kj <Esc>
+imap ㅓㅏ <Esc>
+imap ㅏㅓ <Esc>
+
+" 명령행 한글 입력 오류 처리
+ca ㅈ w
+
+" ctrl-j 로 라인을 분리.
+map <C-j> i<ENTER><ESC>
+
+
+" copy , paste , select 기능 보완 -------------------------------
+nnoremap Y y$
+noremap <Space>y	"+y
+nnoremap <Space>p	"+p
+nnoremap <Space>a	<S-v>ggG
+
+" navigation 기능 보완 ---------------------------------
+nnoremap <Space>h ^
+nnoremap <Space>l $
+noremap <Space>j 8j
+noremap <Space>k 8k
+nnoremap gr gT
+
+"-------------leedo--------------- block comment 입력
+imap ,/ /* */<ESC>2F*a<SPACE>
+imap ,for for(var<SPACE>i=0;<SPACE>i<data.length;<SPACE>++i){<ENTER><ENTER>
+"--- map <ENTER> A<ENTER><ESC>
+map <TAB> I<TAB><ESC>^
+inoremap <C-Space> <C-p>
+imap ,con console.log(
+
+"------------leedo.End-------------
+set gvimpath=E:\Program Files (x86)\Vim\vim74\gvim.exe
+
+nnoremap Y y$
+
+
+" vrapper 에서 지원하지 않는 [[, ]] 기능을 구현한다.
+"https://github.com/vrapper/vrapper/issues/352
+eclipseaction eclipsenextmember org.eclipse.jdt.ui.edit.text.java.goto.next.member
+nnoremap ]] :eclipsenextmember<cr>
+eclipseaction eclipseprevmember org.eclipse.jdt.ui.edit.text.java.goto.previous.member
+nnoremap [[ :eclipseprevmember<cr>
+
+" vrapper eclipseactions --------------------------------
+" http://help.eclipse.org/help33/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/texteditor/IWorkbenchActionDefinitionIds.html
+" http://help.eclipse.org/help33/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/texteditor/ITextEditorActionDefinitionIds.html
+" http://help.eclipse.org/ganymede/topic/org.eclipse.jdt.doc.isv/reference/api/org/eclipse/jdt/ui/actions/IJavaEditorActionDefinitionIds.html
+
+"편집중인 파일이 위치하는 곳을 운영체제 기본 파일 네비게이터에서 열어준다.
+eclipseaction	opendir	org.eclipse.ui.ide.showInSystemExplorer
+
+" search reference 를 수행한다.
+eclipseaction	ref		org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace
+
+" class, method doc 주석을 보여준다
+eclipseuiaction doc org.eclipse.ui.edit.text.showInformation
+
+" java class 상단 import 중 사용하지 않는 클래스를 정리해 준다.
+eclipseaction   organizeimports	org.eclipse.jdt.ui.edit.text.java.organize.imports
+
+" 마지막 편집했던 곳으로 이동한다
+eclipseaction 	lastedit	org.eclipse.ui.edit.text.gotoLastEditPosition
+map <m-q> :lastedited<ENTER>
+
+" 편의 기능들 *(주석 달기 귀찮다)
+eclipseaction	rename			org.eclipse.jdt.ui.edit.text.java.rename.element
+eclipseuiaction	fix				org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+eclipseaction	resource		org.eclipse.ui.navigate.openResource
+eclipseaction	getset			org.eclipse.jdt.ui.edit.text.java.create.getter.setter
+eclipseaction	tostring		org.eclipse.jdt.ui.edit.text.java.generate.tostring
+eclipseaction	overridemethods	org.eclipse.jdt.ui.edit.text.java.override.methods
+eclipseaction	breadcrumb 		org.eclipse.jdt.ui.edit.text.java.gotoBreadcrumb
+eclipseaction	tbreadcrumb 	org.eclipse.jdt.ui.edit.text.java.toggleBreadcrumb
+eclipseaction	outline			org.eclipse.jdt.ui.edit.text.java.show.outline
+eclipseaction	revertline		org.eclipse.ui.editors.quickdiff.revertLine
+map U :revertline<ENTER>
+"eclipseaction	revertselection	org.eclipse.ui.editors.quickdiff.revert
+eclipseaction	information		org.eclipse.ui.edit.text.showInformation
+"eclipseaction	properties		org.eclipse.ui.file.properties
+eclipseaction	tycatch			org.eclipse.jdt.ui.edit.text.java.surround.with.try.catch
+eclipseaction	rulermenu		org.eclipse.ui.edit.text.showRulerContextMenu
+eclipseaction	perspective		org.eclipse.ui.window.nextPerspective
+eclipseaction	view			org.eclipse.ui.window.previousView
+
+
+
