@@ -1,0 +1,26 @@
+1. git 설치
+
+2. vundle 설치
+C:\Users\home> cd %USERPROFILE%
+C:\Users\home> git clone http://github.com/gmarik/vundle.git .vim/bundle/vundle
+C:\Users\home> gvim _vimrc
+
+
+3. _vimrc  설정
+set nocompatible               " be iMproved
+filetype off                   " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
+
+// 이사이에 필요한 플러그인 설정
+Plugin 'scrooloose/nerdtree'
+Plugin 'mattn/emmet-vim'
+
+
+call vundle#end()            " required
+ 
+filetype plugin indent on     " required!
+
+4. vim 재시작후 :BundleInstall
+
+Finish!!!!!
