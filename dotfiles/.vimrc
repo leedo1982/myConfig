@@ -1,7 +1,7 @@
 
 " source ~/git/dotfiles/init.vim
-source ~/git/dotfiles/vimConfig/plugin.vim
-source ~/git/dotfiles/vimConfig/vimSetting.vim
+source ~/myConfig/dotfiles/vimConfig/plugin.vim
+source ~/myConfig/dotfiles/vimConfig/vimSetting.vim
 
 
 " insert mode 에  따른  cursor 모드 변경
