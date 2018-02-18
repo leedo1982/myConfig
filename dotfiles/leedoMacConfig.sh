@@ -7,7 +7,7 @@ rm  ~/.bashrc
 rm  ~/.bash_profile
 rm  ~/.ideavimrc
 rm  ~/.bash-powerline.sh
-rm  ~/.hammerspoon
+rm -rf  ~/.hammerspoon/
 
 ln -s  ~/myConfig/dotfiles/.vimrc ~/.vimrc
 ln -s  ~/myConfig/dotfiles/.bashrc ~/.bashrc 
