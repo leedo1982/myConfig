@@ -7,15 +7,39 @@
 -- 선행작업 . karabiner 로  caps_lock 을 right_control로 변경한다. 
 -- 아래 코드를 hammerspoon으로 활성화 한다. 
 
+
+local normal_keyflag = false
+local control_keyflag = false
+
+normal_keydownevent = hs.eventtap.new({hs.eventtap.event.types.keyDown},function(event)
+    local keycode = hs.keycodes.map[event:getKeyCode()]
+    if(control_keyflag == true) then
+        normal_keyflag = true
+    elseif(control_keyflag == false) then
+        normal_keyflag = false
+    end
+
+    return false
+end)
+normal_keydownevent:start()
+
 control_keyevent = hs.eventtap.new({hs.eventtap.event.types.flagsChanged},function(event)
     local flags = event:getFlags()
     local keycode = hs.keycodes.map[event:getKeyCode()]
 
-    if(keycode == 'rightctrl' and flags.ctrl == nil) then 
+    if(flags.ctrl == true) then
+        control_keyflag = true
+    elseif(flags.ctrl == nil) then
+        control_keyflag = false
+    end
+
+    if(keycode == 'rightctrl' and flags.ctrl == nil and normal_keyflag == false) then 
         print('rightCtrl & escape !!')
         changeLanguage()
         hs.eventtap.keyStroke({}, 'escape')
     end
+
+    normal_keyflag = false
 
     return false
 end)
