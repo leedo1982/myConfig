@@ -11,7 +11,8 @@
 local normal_keyflag = false
 local control_keyflag = false
 
-normal_keydownevent = hs.eventtap.new({hs.eventtap.event.types.keyDown},function(event)
+normal_mousedownevent = hs.eventtap.new({hs.eventtap.event.types.leftMouseDown},function(event)
+    print("mouse down")
     local keycode = hs.keycodes.map[event:getKeyCode()]
     if(control_keyflag == true) then
         normal_keyflag = true
@@ -19,7 +20,17 @@ normal_keydownevent = hs.eventtap.new({hs.eventtap.event.types.keyDown},function
         normal_keyflag = false
     end
 
-    return false
+end)
+normal_mousedownevent:start()
+
+normal_keydownevent = hs.eventtap.new({hs.eventtap.event.types.keyUp},function(event)
+    local keycode = hs.keycodes.map[event:getKeyCode()]
+    if(control_keyflag == true) then
+        normal_keyflag = true
+    elseif(control_keyflag == false) then
+        normal_keyflag = false
+    end
+
 end)
 normal_keydownevent:start()
 
