@@ -1,18 +1,10 @@
 
--- 해피해킹 키보드 처럼 caps_lock를 controll로 사용하기  + vim 또한 편리하게 
--- vim 사용하며 esc 키로 영자 전환을 하며, 동시에 해피해킹과 같이 control 키로 동시에 사용하기 위해 
--- 왜 caps_lock 키 인가? caps_lock 키의 활용도가 제일 낮고 해피해킹과 동일한 위치
--- 왜 right_controll 키 인가? 맥북에는 right_control키가 없고, modifier key의 기능을 유지하기 위함
-
--- 선행작업 . karabiner 로  caps_lock 을 right_control로 변경한다. 
--- 아래 코드를 hammerspoon으로 활성화 한다. 
-
-
 local normal_keyflag = false
 local control_keyflag = false
+local fnkeyflag = false
 
+-- 마우스 클릭 이벤트 구독 
 normal_mousedownevent = hs.eventtap.new({hs.eventtap.event.types.leftMouseDown},function(event)
-    print("mouse down")
     local keycode = hs.keycodes.map[event:getKeyCode()]
     if(control_keyflag == true) then
         normal_keyflag = true
@@ -23,14 +15,27 @@ normal_mousedownevent = hs.eventtap.new({hs.eventtap.event.types.leftMouseDown},
 end)
 normal_mousedownevent:start()
 
-normal_keydownevent = hs.eventtap.new({hs.eventtap.event.types.keyUp},function(event)
+-- 키 다운 이벤트 구독 
+normal_keydownevent = hs.eventtap.new({hs.eventtap.event.types.keyDown},function(event)
     local keycode = hs.keycodes.map[event:getKeyCode()]
+
     if(control_keyflag == true) then
         normal_keyflag = true
     elseif(control_keyflag == false) then
         normal_keyflag = false
     end
 
+    if(fnkeyflag) then
+        if(keycode == 'h') then
+            event:setKeyCode(hs.keycodes.map['left'])
+        elseif(keycode == 'j') then
+            event:setKeyCode(hs.keycodes.map['down'])
+         elseif(keycode == 'k') then
+            event:setKeyCode(hs.keycodes.map['up'])
+        elseif(keycode == 'l') then
+            event:setKeyCode(hs.keycodes.map['right'])
+        end
+    end
 end)
 normal_keydownevent:start()
 
@@ -44,10 +49,15 @@ control_keyevent = hs.eventtap.new({hs.eventtap.event.types.flagsChanged},functi
         control_keyflag = false
     end
 
+    if(flags.fn == true) then
+        fnkeyflag = true
+    end
+
     if(keycode == 'rightctrl' and flags.ctrl == nil and normal_keyflag == false) then 
         print('rightCtrl & escape !!')
         changeLanguage()
         hs.eventtap.keyStroke({}, 'escape')
+        fnkeyflag = false
     end
 
     normal_keyflag = false
