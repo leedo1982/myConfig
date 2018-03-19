@@ -20,6 +20,8 @@ call vundle#begin()
     Plugin 'JamshedVesuna/vim-markdown-preview'
 "    Plugin 'valloric/youcompleteme'
 
+    " f 검색시 한글도 포함 made by johngrib
+    Plugin 'johngrib/vim-f-hangul'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
