@@ -11,7 +11,7 @@ fi
 alias l.='ls -d .* --color=auto'
 alias ll='ls -al'
 #alias vi=nvim
-alias vi='mvim '
+#alias vi='mvim '
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
@@ -36,6 +36,10 @@ PS1="${YELLOW}${TIMESTAMP} ${GREEN}\u ${B_MAGENTA}\h ${YELLOW}\w ${COLOR_END} ${
 #fi
 #PS1="${PS1}\n\$ "
 export PS1
+
+
+LANG="ko_KR.UTF-8"
+export LANG="ko_KR.UTF-8"
 
 # terminals are sexy
 source ~/.bash-powerline.sh 

@@ -1,0 +1,291 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+&	dotfiles/init.vim	/^    nnoremap & :&&<CR>$/;"	m
+&	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap & :&&<CR>$/;"	m
+) hs.reload	dotfiles/.hammerspoon/modules/vim.lua	/^    caps_mode:bind({'shift'}, 'r', function() hs.reload() end, vim_end)$/;"	f
+) hs.window.focusedWindow	dotfiles/.hammerspoon/modules/appman.lua	/^    app_mode:bind({}, ';', function() hs.window.focusedWindow():focusWindowWest() end)$/;"	f
+) hs.window.focusedWindow	dotfiles/.hammerspoon/modules/appman.lua	/^    app_mode:bind({}, '[', function() hs.window.focusedWindow():focusWindowNorth() end)$/;"	f
+) hs.window.focusedWindow	dotfiles/.hammerspoon/modules/appman.lua	/^    app_mode:bind({}, '\/', function() hs.window.focusedWindow():focusWindowSouth() end)$/;"	f
+) hs.window.focusedWindow	dotfiles/.hammerspoon/modules/appman.lua	/^    app_mode:bind({}, '\\'', function() hs.window.focusedWindow():focusWindowEast() end)$/;"	f
+) move_win	dotfiles/.hammerspoon/modules/winman.lua	/^    win_mode:bind({}, 'a', function() move_win(0, 0, 2, 1) end)$/;"	f
+) move_win	dotfiles/.hammerspoon/modules/winman.lua	/^    win_mode:bind({}, 'c', function() move_win(1, 1, 2, 2) end)$/;"	f
+) move_win	dotfiles/.hammerspoon/modules/winman.lua	/^    win_mode:bind({}, 'd', function() move_win(1, 0, 2, 1) end)$/;"	f
+) move_win	dotfiles/.hammerspoon/modules/winman.lua	/^    win_mode:bind({}, 'e', function() move_win(1, 0, 2, 2) end)$/;"	f
+) move_win	dotfiles/.hammerspoon/modules/winman.lua	/^    win_mode:bind({}, 'q', function() move_win(0, 0, 2, 2) end)$/;"	f
+) move_win	dotfiles/.hammerspoon/modules/winman.lua	/^    win_mode:bind({}, 's', function() move_win(0, 0, 1, 1) end)$/;"	f
+) move_win	dotfiles/.hammerspoon/modules/winman.lua	/^    win_mode:bind({}, 'w', function() move_win(0, 0, 1, 2) end)$/;"	f
+) move_win	dotfiles/.hammerspoon/modules/winman.lua	/^    win_mode:bind({}, 'x', function() move_win(0, 1, 1, 2) end)$/;"	f
+) move_win	dotfiles/.hammerspoon/modules/winman.lua	/^    win_mode:bind({}, 'z', function() move_win(0, 1, 2, 2) end)$/;"	f
+<C-e>	dotfiles/init.vim	/^    inoremap <C-e> <C-O>\$$/;"	m
+<C-n>	dotfiles/vimConfig/plugin.vim	/^map <C-n> :NERDTreeToggle<CR>$/;"	m
+<C-t>	dotfiles/init.vim	/^    vnoremap <C-t> :Tabularize \/$/;"	m
+<C-x><C-l>	dotfiles/init.vim	/^    imap <C-x><C-l> <plug>(fzf-complete-line)$/;"	m
+<F3>	dotfiles/init.vim	/^    nnoremap <F3>     :execute "vimgrep \/" . expand("<cword>") . "\/j **" <Bar> cw<CR>$/;"	m
+<F3>	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <F3>     :execute "vimgrep \/" . expand("<cword>") . "\/j **" <Bar> cw<CR>$/;"	m
+<F4>	dotfiles/init.vim	/^    nnoremap <F4>     :execute "VWS \/" . expand("<cword>") . "\/" <Bar> :lopen<CR>$/;"	m
+<Leader>	dotfiles/init.vim	/^    map  <Leader>  <Plug>(easymotion-prefix)$/;"	m
+<Leader>P	dotfiles/init.vim	/^    nnoremap <Leader>P "+P$/;"	m
+<Leader>Y	dotfiles/init.vim	/^    nnoremap <Leader>Y "+yg_$/;"	m
+<Leader>h	dotfiles/init.vim	/^    nmap <Leader>h <Plug>(easymotion-linebackward)$/;"	m
+<Leader>h	dotfiles/init.vim	/^    vmap <Leader>h <Plug>(easymotion-linebackward)$/;"	m
+<Leader>j	dotfiles/init.vim	/^    nmap <Leader>j <Plug>(easymotion-j)$/;"	m
+<Leader>j	dotfiles/init.vim	/^    vmap <Leader>j <Plug>(easymotion-j)$/;"	m
+<Leader>k	dotfiles/init.vim	/^    nmap <Leader>k <Plug>(easymotion-k)$/;"	m
+<Leader>k	dotfiles/init.vim	/^    vmap <Leader>k <Plug>(easymotion-k)$/;"	m
+<Leader>l	dotfiles/init.vim	/^    nmap <Leader>l <Plug>(easymotion-lineforward)$/;"	m
+<Leader>l	dotfiles/init.vim	/^    vmap <Leader>l <Plug>(easymotion-lineforward)$/;"	m
+<Leader>p	dotfiles/init.vim	/^    nnoremap <Leader>p "+p$/;"	m
+<Leader>s	dotfiles/init.vim	/^    nmap <Leader>s <Plug>(easymotion-overwin-f2)$/;"	m
+<Leader>s	dotfiles/init.vim	/^    vmap <Leader>s <Plug>(easymotion-bd-f)$/;"	m
+<Leader>y	dotfiles/init.vim	/^    nnoremap <Leader>y "+y$/;"	m
+<Leader>y	dotfiles/init.vim	/^    vnoremap <Leader>y "+y$/;"	m
+<LocalLeader><LocalLeader>n	dotfiles/init.vim	/^    nnoremap <LocalLeader><LocalLeader>n :NERDTreeToggle<CR>$/;"	m
+<LocalLeader><LocalLeader>s	dotfiles/init.vim	/^    nmap <LocalLeader><LocalLeader>s :SSave<CR>$/;"	m
+<LocalLeader>C	dotfiles/init.vim	/^    nmap <LocalLeader>C <Plug>(operator-decamelize)$/;"	m
+<LocalLeader>c	dotfiles/init.vim	/^    nmap <LocalLeader>c <Plug>(operator-camelize)$/;"	m
+<LocalLeader>n	dotfiles/init.vim	/^    nnoremap <LocalLeader>n :NERDTreeFind<CR>$/;"	m
+<LocalLeader>r	dotfiles/init.vim	/^    nnoremap <LocalLeader>r :RainbowToggle<CR>$/;"	m
+<LocalLeader>s	dotfiles/init.vim	/^    nmap <LocalLeader>s :Startify<CR>$/;"	m
+<LocalLeader>t	dotfiles/init.vim	/^    nnoremap <LocalLeader>t :TagbarToggle<CR>$/;"	m
+<LocalLeader>u	dotfiles/init.vim	/^    nnoremap <LocalLeader>u :UndotreeToggle<cr>$/;"	m
+<LocalLeader>w<LocalLeader>t	dotfiles/init.vim	/^    nmap <LocalLeader>w<LocalLeader>t <Plug>VimwikiTabMakeDiaryNote$/;"	m
+<LocalLeader>w<LocalLeader>w	dotfiles/init.vim	/^    nmap <LocalLeader>w<LocalLeader>w <Plug>VimwikiMakeDiaryNote$/;"	m
+<LocalLeader>w<LocalLeader>y	dotfiles/init.vim	/^    nmap <LocalLeader>w<LocalLeader>y <Plug>VimwikiMakeYesterdayDiaryNote$/;"	m
+<LocalLeader>wh	dotfiles/init.vim	/^    nmap <LocalLeader>wh <Plug>Vimwiki2HTML$/;"	m
+<LocalLeader>whh	dotfiles/init.vim	/^    nmap <LocalLeader>whh <Plug>Vimwiki2HTMLBrowse$/;"	m
+<LocalLeader>wi	dotfiles/init.vim	/^    nmap <LocalLeader>wi <Plug>VimwikiDiaryIndex$/;"	m
+<LocalLeader>ws	dotfiles/init.vim	/^    nmap <LocalLeader>ws <Plug>VimwikiUISelect$/;"	m
+<LocalLeader>wt	dotfiles/init.vim	/^    nmap <LocalLeader>wt :VimwikiTable<CR>$/;"	m
+<LocalLeader>ww	dotfiles/init.vim	/^    nmap <LocalLeader>ww <Plug>VimwikiIndex$/;"	m
+<M-+>	dotfiles/init.vim	/^    nnoremap <M-+> <C-w>+$/;"	m
+<M-,>	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <M-,> :bprevious!<CR>    " 이전 버퍼로 이동$/;"	m
+<M-.>	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <M-.> :bnext!<CR>        " 다음 버퍼로 이동$/;"	m
+<M-<>	dotfiles/init.vim	/^    nnoremap <M-<> <C-w><$/;"	m
+<M->>	dotfiles/init.vim	/^    nnoremap <M->> <C-w>>$/;"	m
+<M-Q>	dotfiles/init.vim	/^    nnoremap <M-Q> :bp <BAR> bd #<CR> " 현재 버퍼를 닫고 이전 버퍼로 이동$/;"	m
+<M-_>	dotfiles/init.vim	/^    nnoremap <M-_> <C-w>-$/;"	m
+<M-j>	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <M-j> ddp$/;"	m
+<M-j>	dotfiles/vimConfig/vimSetting.vim	/^    vnoremap <M-j> xp`[V`]$/;"	m
+<M-k>	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <M-k> ddkP$/;"	m
+<M-k>	dotfiles/vimConfig/vimSetting.vim	/^    vnoremap <M-k> xkP`[V`]$/;"	m
+<M-q>	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <M-q> :bp <BAR> bd #<CR> " 현재 버퍼를 닫고 이전 버퍼로 이동$/;"	m
+<M-t>	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <M-t> :enew<CR>          " 새로운 버퍼를 연다$/;"	m
+<S-F4>	dotfiles/init.vim	/^    nnoremap <S-F4>   :execute "VWB" <Bar> :lopen<CR>$/;"	m
+<Space>P	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <Space>P "*P$/;"	m
+<Space>Y	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <Space>Y "*yg_$/;"	m
+<Space>a	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <Space>a gg<S-v>G$/;"	m
+<Space>e	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <Space>e :browse oldfiles<CR>$/;"	m
+<Space>p	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <Space>p "*p$/;"	m
+<Space>w	dotfiles/init.vim	/^    nnoremap <Space>w :w<CR>$/;"	m
+<Space>y	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <Space>y "*y$/;"	m
+<Space>y	dotfiles/vimConfig/vimSetting.vim	/^    vnoremap <Space>y "*y$/;"	m
+<f1>	dotfiles/init.vim	/^    nnoremap <f1> <nop>$/;"	m
+<f1>/	dotfiles/init.vim	/^    nnoremap <f1>\/ :History\/<CR>$/;"	m
+<f1><f1>	dotfiles/init.vim	/^    nnoremap <f1><f1> :Files<CR>$/;"	m
+<f1>a	dotfiles/init.vim	/^    nnoremap <f1>a :Ag $/;"	m
+<f1>b	dotfiles/init.vim	/^    nnoremap <f1>b :Buffers<CR>$/;"	m
+<f1>c	dotfiles/init.vim	/^    nnoremap <f1>c :History:<CR>$/;"	m
+<f1>f	dotfiles/init.vim	/^    nnoremap <f1>f :Files<CR>$/;"	m
+<f1>h	dotfiles/init.vim	/^    nnoremap <f1>h :History<CR>$/;"	m
+<f1>l	dotfiles/init.vim	/^    nnoremap <f1>l :Lines<CR>$/;"	m
+<f1>m	dotfiles/init.vim	/^    nnoremap <f1>m :Marks<CR>$/;"	m
+<f5>	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap <f5> :!ctags -R<CR>$/;"	m
+<leader>/	dotfiles/init.vim	/^    nnoremap <leader>\/ :call eregex#toggle()<CR>$/;"	m
+<nowait>	dotfiles/init.vim	/^    nnoremap <nowait> <Esc>+ <C-w>+$/;"	m
+<nowait>	dotfiles/init.vim	/^    nnoremap <nowait> <Esc>< <C-w><$/;"	m
+<nowait>	dotfiles/init.vim	/^    nnoremap <nowait> <Esc>> <C-w>>$/;"	m
+<nowait>	dotfiles/init.vim	/^    nnoremap <nowait> <Esc>_ <C-w>-$/;"	m
+DoRemote	dotfiles/init.vim	/^    function! DoRemote(arg)$/;"	f
+Files	dotfiles/init.vim	/^    command! -bang -nargs=? -complete=dir Files$/;"	c
+FzfOmniFiles	dotfiles/init.vim	/^function! FzfOmniFiles()$/;"	f
+GetFileAddress	dotfiles/init.vim	/^    command! GetFileAddress :let @*=expand('%:p')$/;"	c
+GetFileAddress	dotfiles/init.vim	/^    command! GetFileAddress :let @*=substitute(expand("%:p"), "\/", "\\\\", "g")<CR>$/;"	c
+GetFileName	dotfiles/init.vim	/^    command! GetFileName :let @*=expand('%')$/;"	c
+GetFileName	dotfiles/init.vim	/^    command! GetFileName :let @*=substitute(expand("%"), "\/", "\\\\", "g")$/;"	c
+History	dotfiles/init.vim	/^    command! -bang -nargs=* History call fzf#vim#history(fzf#vim#with_preview())$/;"	c
+K	dotfiles/init.vim	/^    nnoremap K i<CR><Esc>$/;"	m
+LastModified	dotfiles/init.vim	/^function! LastModified()$/;"	f
+NERDTreeDirArrows	dotfiles/init.vim	/^    let NERDTreeDirArrows = 1$/;"	v
+NERDTreeMinimalUI	dotfiles/init.vim	/^    let NERDTreeMinimalUI = 1$/;"	v
+NERDTreeQuitOnOpen	dotfiles/vimConfig/plugin.vim	/^let NERDTreeQuitOnOpen=1$/;"	v
+NERDTreeShowHidden	dotfiles/init.vim	/^    let NERDTreeShowHidden = 1 "Show hidden files in NerdTree$/;"	v
+NERDTreeShowHidden	dotfiles/vimConfig/plugin.vim	/^let NERDTreeShowHidden=1$/;"	v
+Ncd	dotfiles/init.vim	/^command! Ncd :cd %:p:h$/;"	c
+Ncd	dotfiles/vimConfig/vimSetting.vim	/^    command! Ncd :cd %:p:h$/;"	c
+ToHtml	dotfiles/init.vim	/^command! ToHtml :so $VIMRUNTIME\/syntax\/2html.vim$/;"	c
+ToggleNumber	dotfiles/init.vim	/^function! ToggleNumber()$/;"	f
+WikiIndex	dotfiles/init.vim	/^    command! WikiIndex :VimwikiIndex$/;"	c
+Y	dotfiles/init.vim	/^    nnoremap Y y\$$/;"	m
+Y	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap Y y\$$/;"	m
+__git_info	dotfiles/.bash-powerline.sh	/^    __git_info() { $/;"	f
+__powerline	dotfiles/.bash-powerline.sh	/^__powerline() {$/;"	f
+app_focus	dotfiles/.hammerspoon/modules/appman.lua	/^    function app_focus(name)$/;"	f
+box) box:delete	dotfiles/.hammerspoon/modules/vim.lua	/^        hs.fnutils.each(boxes, function(box) box:delete() end)$/;"	f
+caffeineClicked	dotfiles/.hammerspoon/modules/caffein.lua	/^    function caffeineClicked()$/;"	f
+changeLanguage	dotfiles/.hammerspoon/modules/mac_esc.lua	/^function changeLanguage()$/;"	f
+clearAll	dotfiles/.hammerspoon/modules/clipboard.lua	/^function clearAll()$/;"	f
+clearLastItem	dotfiles/.hammerspoon/modules/clipboard.lua	/^function clearLastItem()$/;"	f
+control_keyevent 	dotfiles/.hammerspoon/modules/mac_esc.lua	/^control_keyevent = hs.eventtap.new({hs.eventtap.event.types.flagsChanged},function(event)$/;"	f
+draw_rectangle	dotfiles/.hammerspoon/modules/vim.lua	/^function draw_rectangle(target_draw, screen, offset, width, fill_color)$/;"	f
+focusScreen	dotfiles/.hammerspoon/modules/appman.lua	/^function focusScreen(screen)$/;"	f
+g:AutoPairsFlyMode	dotfiles/init.vim	/^    let g:AutoPairsFlyMode = 0$/;"	v
+g:AutoPairsShortcutBackInsert	dotfiles/init.vim	/^    let g:AutoPairsShortcutBackInsert = ''$/;"	v
+g:AutoPairsShortcutFastWrap	dotfiles/init.vim	/^    let g:AutoPairsShortcutFastWrap = ''$/;"	v
+g:AutoPairsShortcutJump	dotfiles/init.vim	/^    let g:AutoPairsShortcutJump = ''$/;"	v
+g:AutoPairsShortcutToggle	dotfiles/init.vim	/^    let g:AutoPairsShortcutToggle = ''$/;"	v
+g:EasyMotion_smartcase	dotfiles/init.vim	/^    let g:EasyMotion_smartcase = 1$/;"	v
+g:EasyMotion_startofline	dotfiles/init.vim	/^    let g:EasyMotion_startofline = 0 " keep cursor column when JK motion$/;"	v
+g:NERDTreeDirArrowCollapsible	dotfiles/vimConfig/plugin.vim	/^let g:NERDTreeDirArrowCollapsible = '▾'$/;"	v
+g:NERDTreeDirArrowExpandable	dotfiles/vimConfig/plugin.vim	/^let g:NERDTreeDirArrowExpandable = '▸'$/;"	v
+g:NERDTreeQuitOnOpen	dotfiles/init.vim	/^    let g:NERDTreeQuitOnOpen = 0$/;"	v
+g:SrcExpl_isUpdateTags	dotfiles/init.vim	/^    let g:SrcExpl_isUpdateTags = 0$/;"	v
+g:SrcExpl_nextDefKey	dotfiles/init.vim	/^    let g:SrcExpl_nextDefKey = "<PAGEDOWN>"$/;"	v
+g:SrcExpl_pluginList	dotfiles/init.vim	/^    let g:SrcExpl_pluginList = [$/;"	v
+g:SrcExpl_prevDefKey	dotfiles/init.vim	/^    let g:SrcExpl_prevDefKey = "<PAGEUP>"$/;"	v
+g:SrcExpl_searchLocalDef	dotfiles/init.vim	/^    let g:SrcExpl_searchLocalDef = 1$/;"	v
+g:airline#extensions#tabline#buffer_nr_format	dotfiles/init.vim	/^    let g:airline#extensions#tabline#buffer_nr_format = '%s:' " buffer number format$/;"	v
+g:airline#extensions#tabline#buffer_nr_show	dotfiles/init.vim	/^    let g:airline#extensions#tabline#buffer_nr_show = 1 " buffer number 를 보여준다$/;"	v
+g:airline#extensions#tabline#enabled	dotfiles/init.vim	/^    let g:airline#extensions#tabline#enabled = 1     " vim-airline 버퍼 목록 켜기$/;"	v
+g:airline#extensions#tabline#fnamemod	dotfiles/init.vim	/^    let g:airline#extensions#tabline#fnamemod = ':t' " vim-airline 버퍼 목록 파일명만 출력$/;"	v
+g:airline_powerline_fonts	dotfiles/init.vim	/^    let g:airline_powerline_fonts = 1$/;"	v
+g:ale_fixers	dotfiles/init.vim	/^    let g:ale_fixers = { 'javascript': ['eslint'] }$/;"	v
+g:ale_lint_on_save	dotfiles/init.vim	/^    let g:ale_lint_on_save = 1$/;"	v
+g:ale_lint_on_text_changed	dotfiles/init.vim	/^    let g:ale_lint_on_text_changed = 0$/;"	v
+g:ctrlp_cmd	dotfiles/init.vim	/^    let g:ctrlp_cmd = 'CtrlP'$/;"	v
+g:ctrlp_map	dotfiles/init.vim	/^    let g:ctrlp_map = '<c-p>'$/;"	v
+g:ctrlp_working_path_mode	dotfiles/init.vim	/^    let g:ctrlp_working_path_mode = 'ra'$/;"	v
+g:deoplete#enable_at_startup	dotfiles/init.vim	/^    let g:deoplete#enable_at_startup = 1$/;"	v
+g:eregex_backward_delim	dotfiles/init.vim	/^    let g:eregex_backward_delim = '?'$/;"	v
+g:eregex_default_enable	dotfiles/init.vim	/^    let g:eregex_default_enable = 0$/;"	v
+g:eregex_force_case	dotfiles/init.vim	/^    let g:eregex_force_case = 0$/;"	v
+g:eregex_forward_delim	dotfiles/init.vim	/^    let g:eregex_forward_delim = '\/'$/;"	v
+g:fzf_launcher	dotfiles/init.vim	/^    let g:fzf_launcher = "In_a_new_term_function %s"$/;"	v
+g:md_modify_disabled	dotfiles/init.vim	/^let g:md_modify_disabled = 0$/;"	v
+g:molokai_original	dotfiles/vimConfig/vimSetting.vim	/^        let g:molokai_original = 1$/;"	v
+g:multi_cursor_next_key	dotfiles/init.vim	/^    let g:multi_cursor_next_key='<C-n>'$/;"	v
+g:multi_cursor_prev_key	dotfiles/init.vim	/^    let g:multi_cursor_prev_key='<C-p>'$/;"	v
+g:multi_cursor_quit_key	dotfiles/init.vim	/^    let g:multi_cursor_quit_key='<Esc>'$/;"	v
+g:multi_cursor_skip_key	dotfiles/init.vim	/^    let g:multi_cursor_skip_key='<C-x>'$/;"	v
+g:rainbow_active	dotfiles/init.vim	/^    let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle$/;"	v
+g:startify_change_to_vcs_root	dotfiles/init.vim	/^    let g:startify_change_to_vcs_root = 1$/;"	v
+g:startify_commands	dotfiles/init.vim	/^    let g:startify_commands = [$/;"	v
+g:startify_custom_header	dotfiles/init.vim	/^    let g:startify_custom_header = ['']$/;"	v
+g:startify_list_order	dotfiles/init.vim	/^    let g:startify_list_order = [$/;"	v
+g:startify_session_sort	dotfiles/init.vim	/^    let g:startify_session_sort = 1$/;"	v
+g:startify_update_oldfiles	dotfiles/init.vim	/^    let g:startify_update_oldfiles = 1$/;"	v
+g:syntastic_always_populate_loc_list	dotfiles/init.vim	/^    let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_always_populate_loc_list	dotfiles/vimConfig/plugin.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_auto_loc_list	dotfiles/init.vim	/^    let g:syntastic_auto_loc_list = 0$/;"	v
+g:syntastic_auto_loc_list	dotfiles/init.vim	/^    let g:syntastic_auto_loc_list = 1$/;"	v
+g:syntastic_auto_loc_list	dotfiles/vimConfig/plugin.vim	/^let g:syntastic_auto_loc_list = 1$/;"	v
+g:syntastic_check_on_open	dotfiles/init.vim	/^    let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_open	dotfiles/vimConfig/plugin.vim	/^let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_wq	dotfiles/init.vim	/^    let g:syntastic_check_on_wq = 0$/;"	v
+g:syntastic_check_on_wq	dotfiles/vimConfig/plugin.vim	/^let g:syntastic_check_on_wq = 0$/;"	v
+g:syntastic_mode_map	dotfiles/init.vim	/^    let g:syntastic_mode_map = { 'mode': 'passive' }$/;"	v
+g:syntastic_php_checkers	dotfiles/init.vim	/^    let g:syntastic_php_checkers = ['php']$/;"	v
+g:vim_game_code_break_item_limit	dotfiles/init.vim	/^    let g:vim_game_code_break_item_limit = 8$/;"	v
+g:vim_markdown_autowrite	dotfiles/vimConfig/vimSetting.vim	/^let g:vim_markdown_autowrite = 1$/;"	v
+g:vim_markdown_emphasis_multiline	dotfiles/vimConfig/vimSetting.vim	/^let g:vim_markdown_emphasis_multiline = 0$/;"	v
+g:vim_markdown_fenced_languages	dotfiles/vimConfig/vimSetting.vim	/^let g:vim_markdown_fenced_languages = ['csharp=cs']$/;"	v
+g:vim_markdown_folding_disabled	dotfiles/vimConfig/vimSetting.vim	/^let g:vim_markdown_folding_disabled = 1$/;"	v
+g:vim_markdown_folding_level	dotfiles/vimConfig/vimSetting.vim	/^let g:vim_markdown_folding_level = 6$/;"	v
+g:vim_markdown_folding_style_pythonic	dotfiles/vimConfig/vimSetting.vim	/^let g:vim_markdown_folding_style_pythonic = 1$/;"	v
+g:vim_markdown_no_default_key_mappings	dotfiles/vimConfig/vimSetting.vim	/^let g:vim_markdown_no_default_key_mappings = 1$/;"	v
+g:vim_markdown_no_extensions_in_markdown	dotfiles/vimConfig/vimSetting.vim	/^let g:vim_markdown_no_extensions_in_markdown = 1$/;"	v
+g:vim_markdown_override_foldtext	dotfiles/vimConfig/vimSetting.vim	/^let g:vim_markdown_override_foldtext = 0$/;"	v
+g:vim_markdown_toc_autofit	dotfiles/vimConfig/vimSetting.vim	/^let g:vim_markdown_toc_autofit = 1$/;"	v
+g:vimwiki_conceallevel	dotfiles/init.vim	/^    let g:vimwiki_conceallevel = 0$/;"	v
+g:vimwiki_list	dotfiles/init.vim	/^    let g:vimwiki_list = [$/;"	v
+gj	dotfiles/init.vim	/^    nnoremap gj j$/;"	m
+gj	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap gj j$/;"	m
+gk	dotfiles/init.vim	/^    nnoremap gk k$/;"	m
+gk	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap gk k$/;"	m
+gr	dotfiles/init.vim	/^    nnoremap gr :bprevious!<CR>$/;"	m
+gr	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap gr gT$/;"	m
+gt	dotfiles/init.vim	/^    nnoremap gt :bnext!<CR>$/;"	m
+inputKey	dotfiles/.hammerspoon/modules/vim.lua	/^function inputKey(modifiers, key)$/;"	f
+isInScreen	dotfiles/.hammerspoon/modules/vim.lua	/^function isInScreen(screen, win)$/;"	f
+j	dotfiles/init.vim	/^    nnoremap j gj$/;"	m
+j	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap j gj$/;"	m
+k	dotfiles/init.vim	/^    nnoremap k gk$/;"	m
+k	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap k gk$/;"	m
+local getX 	dotfiles/.hammerspoon/modules/mouse.lua	/^local getX = function()$/;"	f
+local getY 	dotfiles/.hammerspoon/modules/mouse.lua	/^local getY = function()$/;"	f
+local mm 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mm = function(func)$/;"	f
+local mouse_e 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_e = mm(function() hs.eventtap.rightClick(hs.mouse.getAbsolutePosition()) end)$/;"	f
+local mouse_f 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_f = mm(function() hs.eventtap.scrollWheel({0,-1}, {}, 'line') end)$/;"	f
+local mouse_move 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_move = function(dir, dist)$/;"	f
+local mouse_move_down 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_move_down = function(dist)$/;"	f
+local mouse_move_left 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_move_left = function(dist)$/;"	f
+local mouse_move_right 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_move_right = function(dist)$/;"	f
+local mouse_move_up 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_move_up = function(dist)$/;"	f
+local mouse_off 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_off = function(dir, dist)$/;"	f
+local mouse_q 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_q = mm(function() hs.eventtap.leftClick(hs.mouse.getAbsolutePosition()) end)$/;"	f
+local mouse_r 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_r = mm(function() hs.eventtap.scrollWheel({0,1}, {}, 'line') end)$/;"	f
+local mouse_s_f 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_s_f = mm(function() hs.eventtap.scrollWheel({0,-1}, {}, 'pixel') end)$/;"	f
+local mouse_s_r 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_s_r = mm(function() hs.eventtap.scrollWheel({0,1}, {}, 'pixel') end)$/;"	f
+local mouse_s_z 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_s_z = mm(function()$/;"	f
+local mouse_z 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local mouse_z = mm(function()$/;"	f
+local move_win 	dotfiles/.hammerspoon/modules/winman.lua	/^    local move_win = function(xx, yy, ww, hh)$/;"	f
+local off_app_mode 	dotfiles/.hammerspoon/modules/appman.lua	/^    local off_app_mode = function()$/;"	f
+local off_caps_mode 	dotfiles/.hammerspoon/modules/vim.lua	/^    local off_caps_mode = function()$/;"	f
+local off_mouse_mode 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local off_mouse_mode = function()$/;"	f
+local off_win_mode 	dotfiles/.hammerspoon/modules/winman.lua	/^    local off_win_mode = function()$/;"	f
+local on_app_mode 	dotfiles/.hammerspoon/modules/appman.lua	/^    local on_app_mode = function() app_mode:enter() end$/;"	f
+local on_app_mode 	dotfiles/.hammerspoon/modules/appman.lua	/^    local on_app_mode = function()$/;"	f
+local on_caps_mode 	dotfiles/.hammerspoon/modules/vim.lua	/^    local on_caps_mode = function()$/;"	f
+local on_mouse_mode 	dotfiles/.hammerspoon/modules/mouse.lua	/^    local on_mouse_mode = function()$/;"	f
+local on_win_mode 	dotfiles/.hammerspoon/modules/winman.lua	/^    local on_win_mode = function() win_mode:enter() end$/;"	f
+local on_win_mode 	dotfiles/.hammerspoon/modules/winman.lua	/^    local on_win_mode = function()$/;"	f
+local pressedfn 	dotfiles/.hammerspoon/modules/inputSourceChange.lua	/^    local pressedfn = function()$/;"	f
+mapleader	dotfiles/init.vim	/^    let mapleader = "\\<Space>"$/;"	v
+maplocalleader	dotfiles/init.vim	/^    let maplocalleader = "\\\\"$/;"	v
+mouse_mode:bind({}, ',', function() flag.dist 	dotfiles/.hammerspoon/modules/mouse.lua	/^    mouse_mode:bind({}, ',', function() flag.dist = 3 end, function() flag.dist = 10 end, nil)$/;"	f
+mouse_mode:bind({}, '.', function() flag.dist 	dotfiles/.hammerspoon/modules/mouse.lua	/^    mouse_mode:bind({}, '.', function() flag.dist = 2 end, function() flag.dist = 10 end, nil)$/;"	f
+mouse_mode:bind({}, '/', function() flag.dist 	dotfiles/.hammerspoon/modules/mouse.lua	/^    mouse_mode:bind({}, '\/', function() flag.dist = 1 end, function() flag.dist = 10 end, nil)$/;"	f
+normal_keydownevent 	dotfiles/.hammerspoon/modules/mac_esc.lua	/^normal_keydownevent = hs.eventtap.new({hs.eventtap.event.types.keyDown},function(event)$/;"	f
+normal_mousedownevent 	dotfiles/.hammerspoon/modules/mac_esc.lua	/^normal_mousedownevent = hs.eventtap.new({hs.eventtap.event.types.leftMouseDown},function(event)$/;"	f
+obj:addKey	dotfiles/.hammerspoon/modules/vim.lua	/^function obj:addKey(v)$/;"	f
+obj:init	dotfiles/.hammerspoon/modules/appman.lua	/^function obj:init(key)$/;"	f
+obj:init	dotfiles/.hammerspoon/modules/caffein.lua	/^function obj:init(mod, key)$/;"	f
+obj:init	dotfiles/.hammerspoon/modules/inputSourceChange.lua	/^function obj:init(mod, key, input_source)$/;"	f
+obj:init	dotfiles/.hammerspoon/modules/mouse.lua	/^function obj:init(key)$/;"	f
+obj:init	dotfiles/.hammerspoon/modules/vim.lua	/^function obj:init(key1, key2)$/;"	f
+obj:init	dotfiles/.hammerspoon/modules/winman.lua	/^function obj:init(key)$/;"	f
+pasteboardToClipboard	dotfiles/.hammerspoon/modules/clipboard.lua	/^function pasteboardToClipboard(item)$/;"	f
+populateMenu 	dotfiles/.hammerspoon/modules/clipboard.lua	/^populateMenu = function(key)$/;"	f
+ps1	dotfiles/.bash-powerline.sh	/^    ps1() {$/;"	f
+putOnPaste	dotfiles/.hammerspoon/modules/clipboard.lua	/^function putOnPaste(string,key)$/;"	f
+rapidKey	dotfiles/.hammerspoon/modules/vim.lua	/^function rapidKey(modifiers, key)$/;"	f
+send_window_next_monitor	dotfiles/.hammerspoon/modules/winman.lua	/^    function send_window_next_monitor()$/;"	f
+send_window_prev_monitor	dotfiles/.hammerspoon/modules/winman.lua	/^    function send_window_prev_monitor()$/;"	f
+setCaffeineDisplay	dotfiles/.hammerspoon/modules/caffein.lua	/^    function setCaffeineDisplay(state)$/;"	f
+setTitle	dotfiles/.hammerspoon/modules/clipboard.lua	/^function setTitle()$/;"	f
+setVimDisplay	dotfiles/.hammerspoon/modules/vim.lua	/^function setVimDisplay(state)$/;"	f
+setgroup	dotfiles/init.vim	/^    augroup setgroup$/;"	a
+show_status_bar	dotfiles/.hammerspoon/modules/vim.lua	/^function show_status_bar(stat)$/;"	f
+storeCopy	dotfiles/.hammerspoon/modules/clipboard.lua	/^function storeCopy()$/;"	f
+table.insert(menuData, {title	dotfiles/.hammerspoon/modules/clipboard.lua	/^    table.insert(menuData, {title="Clear All", fn = function() clearAll() end })$/;"	f
+table.insert(menuData,1, {title	dotfiles/.hammerspoon/modules/clipboard.lua	/^                table.insert(menuData,1, {title=string.sub(v,0,label_length).."…", fn = function() putOnPaste(v,key) end }) -- Truncate long strings$/;"	f
+table.insert(menuData,1, {title	dotfiles/.hammerspoon/modules/clipboard.lua	/^                table.insert(menuData,1, {title=v, fn = function() putOnPaste(v,key) end })$/;"	f
+vim	dotfiles/.hammerspoon/modules/vim.lua	/^function vim(func)$/;"	f
+vim_end	dotfiles/.hammerspoon/modules/vim.lua	/^function vim_end()$/;"	f
+vim_markdown_preview_browser	dotfiles/vimConfig/vimSetting.vim	/^let vim_markdown_preview_browser='Google Chrome'$/;"	v
+vim_markdown_preview_github	dotfiles/vimConfig/vimSetting.vim	/^let vim_markdown_preview_github=1$/;"	v
+vim_markdown_preview_hotkey	dotfiles/vimConfig/vimSetting.vim	/^let vim_markdown_preview_hotkey='<C-m>'$/;"	v
+vim_markdown_preview_temp_file	dotfiles/vimConfig/vimSetting.vim	/^let vim_markdown_preview_temp_file=1$/;"	v
+vim_markdown_preview_toggle	dotfiles/vimConfig/vimSetting.vim	/^let vim_markdown_preview_toggle=1$/;"	v
+vim_markdown_preview_use_xdg_open	dotfiles/vimConfig/vimSetting.vim	/^let vim_markdown_preview_use_xdg_open=1$/;"	v
+œ	dotfiles/vimConfig/vimSetting.vim	/^        nnoremap œ :bp <BAR> bd #<CR> " 현재 버퍼를 닫고 이전 버퍼로 이동$/;"	m
+˚	dotfiles/vimConfig/vimSetting.vim	/^        nnoremap ˚ ddkP$/;"	m
+˚	dotfiles/vimConfig/vimSetting.vim	/^        vnoremap ˚ xkP`[V`]$/;"	m
+†	dotfiles/vimConfig/vimSetting.vim	/^        nnoremap † :enew<CR>          " 새로운 버퍼를 연다$/;"	m
+∆	dotfiles/vimConfig/vimSetting.vim	/^        nnoremap ∆ ddp$/;"	m
+∆	dotfiles/vimConfig/vimSetting.vim	/^        vnoremap ∆ xp`[V`]$/;"	m
+≤	dotfiles/vimConfig/vimSetting.vim	/^        nnoremap ≤ :bprevious!<CR>    " 이전 버퍼로 이동$/;"	m
+≥	dotfiles/vimConfig/vimSetting.vim	/^        nnoremap ≥ :bnext!<CR>        " 다음 버퍼로 이동$/;"	m
