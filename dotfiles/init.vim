@@ -88,7 +88,7 @@ filetype plugin indent on " Put your non-Plugin stuff after this line
 
     if has("gui_macvim")
         set macmeta
-        set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h13
+        set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h11
 
         " macVim 에서 esc 로 영문변환, imi 는 1 또는 2 로 설정해준다
         set noimd
