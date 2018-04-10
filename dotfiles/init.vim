@@ -15,9 +15,9 @@ call plug#begin('~/.vim/plugged')
    Plug 'tpope/vim-repeat'
 
    " tags
-   Plug 'vim-scripts/taglist.vim'
-   Plug 'ludovicchabant/vim-gutentags' " 자동으로 tags 파일을 갱신해 준다.
-   Plug 'majutsushi/tagbar'
+   " Plug 'vim-scripts/taglist.vim'
+   " Plug 'ludovicchabant/vim-gutentags' " 자동으로 tags 파일을 갱신해 준다.
+   " Plug 'majutsushi/tagbar'
 
    " version control
    Plug 'tpope/vim-fugitive'           " git 명령어 wrapper
@@ -43,7 +43,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'wellle/targets.vim'           " text object utils
   Plug 'jiangmiao/auto-pairs'
   Plug 'godlygeek/tabular'           " 텍스트 세로 정렬 도구
-"
    " searching
    Plug 'vim-scripts/matchit.zip'
    Plug 'junegunn/vim-xmark', { 'do': 'make' }
@@ -88,7 +87,7 @@ filetype plugin indent on " Put your non-Plugin stuff after this line
 
     if has("gui_macvim")
         set macmeta
-        set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h13
+        set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h12
 
         " macVim 에서 esc 로 영문변환, imi 는 1 또는 2 로 설정해준다
         set noimd
@@ -549,12 +548,12 @@ let g:md_modify_disabled = 0
 
 " Change cursor shape between insert and normal mode in iTerm2.app + tmux + vim
 " https://gist.github.com/andyfowler/1195581
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
+"if exists('$TMUX')
+"  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+"  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+"else
+"  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+"endif
 
 
