@@ -61,7 +61,6 @@ call plug#begin('~/.vim/plugged')
    Plug 'diepm/vim-rest-console'
    Plug 'tpope/vim-db'
 
-
 call plug#end()
 
 " Theme
@@ -87,11 +86,11 @@ filetype plugin indent on " Put your non-Plugin stuff after this line
 
     if has("gui_macvim")
         set macmeta
-        set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h12
+        set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h11
 
         " macVim 에서 esc 로 영문변환, imi 는 1 또는 2 로 설정해준다
-        set noimd
-        set imi=1
+        " set noimd
+        " set imi=1
     else
         " tmux에서 배경색이 이상하게 나오는 문제를 해결한다.
         " link : http://stackoverflow.com/a/15095377
@@ -102,7 +101,7 @@ filetype plugin indent on " Put your non-Plugin stuff after this line
     " set linebreak                     " break at word boundary
     " set showbreak=++
     set list listchars=tab:»\ ,trail:·,extends:>,precedes:<
-    set omnifunc=syntaxcomplete#Complete
+    " set omnifunc=syntaxcomplete#Complete
     set mouse=a
 
     set hidden
@@ -253,7 +252,7 @@ filetype plugin indent on " Put your non-Plugin stuff after this line
     let g:ctrlp_cmd = 'CtrlP'
 
     " UndoTree
-    nnoremap <LocalLeader>u :UndotreeToggle<cr>
+    nnor" emap <LocalLeader>u :UndotreeToggle<cr>
     if has("persistent_undo")
         set undodir=~/.undodir/
         set undofile
@@ -313,10 +312,6 @@ filetype plugin indent on " Put your non-Plugin stuff after this line
     let g:airline#extensions#tabline#buffer_nr_show = 1 " buffer number 를 보여준다
     let g:airline#extensions#tabline#buffer_nr_format = '%s:' " buffer number format
     let g:airline_powerline_fonts = 1
-    " let g:airline_left_sep = ''
-    " let g:airline_left_alt_sep = ''
-    " let g:airline_right_sep = ''
-    " let g:airline_right_alt_sep = ''
 
     " rainbow
     let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
@@ -463,7 +458,7 @@ filetype plugin indent on " Put your non-Plugin stuff after this line
 
     let g:vimwiki_list = [
                 \{
-                \   'path': '~/git/johngrib.github.io/_wiki',
+                \   'path': '~/IdeaProjects/leeod1982.github.io/_wiki',
                 \   'ext' : '.md',
                 \   'diary_rel_path': '.',
                 \},
