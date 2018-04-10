@@ -458,7 +458,7 @@ filetype plugin indent on " Put your non-Plugin stuff after this line
 
     let g:vimwiki_list = [
                 \{
-                \   'path': '~/IdeaProjects/leeod1982.github.io/_wiki',
+                \   'path': '~/IdeaProjects/leedo1982.github.io/_wiki',
                 \   'ext' : '.md',
                 \   'diary_rel_path': '.',
                 \},
@@ -525,10 +525,11 @@ command! Ncd :cd %:p:h
 " Restores cursor and window position using save_cursor variable.
 function! LastModified()
     if g:md_modify_disabled
+    echo('dont markdown updated time modified')
         return
     endif
   if &modified
-    " echo('markdown updated time modified')
+    echo('markdown updated time modified')
     let save_cursor = getpos(".")
     let n = min([10, line("$")])
     keepjumps exe '1,' . n . 's#^\(.\{,10}updated\s*: \).*#\1' .
@@ -537,7 +538,44 @@ function! LastModified()
     call setpos('.', save_cursor)
   endif
 endfun
-autocmd BufWritePre *.md call LastModified()
+function! NewTemplate()
+    for wiki in g:vimwiki_list
+        if '~/IdeaProjects/leedo1982.github.io/_wiki' == wiki.path
+            if line("$") > 1
+                return
+            endif
+
+            let l:template = []
+            call add(l:template, '---')
+            call add(l:template, 'layout  : wiki')
+            call add(l:template, 'title   : ')
+            call add(l:template, 'summary : ')
+            call add(l:template, 'date    : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
+            call add(l:template, 'updated : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
+            call add(l:template, 'tags    : ')
+            call add(l:template, 'toc     : true')
+            call add(l:template, 'public  : true')
+            call add(l:template, 'parent  : ')
+            call add(l:template, 'latex   : false')
+            call add(l:template, '---')
+            call add(l:template, '* TOC')
+            call add(l:template, '{:toc}')
+            call add(l:template, '')
+            call add(l:template, '# ')
+            call setline(1, l:template)
+            execute 'normal! G'
+            execute 'normal! $'
+
+            echo 'new wiki page has created'
+            break
+        endif
+    endfor
+endfunction
+
+augroup vimwikiauto
+    autocmd BufWritePre *.md call LastModified()
+    autocmd BufRead,BufNewFile *.md call NewTemplate()
+augroup END
 
 let g:md_modify_disabled = 0
 
