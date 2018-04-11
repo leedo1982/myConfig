@@ -539,59 +539,61 @@ function! LastModified()
   endif
 endfun
 function! NewTemplate()
+    echo expand('%:p:h')
     if line("$") > 1
         return
     endif
 
-    if '/Users/idowon/IdeaProjects/leedo1982.github.io/_posts/2018' == expand('%:p:h')
+    let l:paths = split(expand('%:p:h'), '/') 
+    for path in l:paths
+        if(path == '_posts')
+            let l:template = []
+            call add(l:template, '---')
+            call add(l:template, 'layout  : post')
+            call add(l:template, 'title   : ')
+            call add(l:template, 'summary : ')
+            call add(l:template, 'date    : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
+            call add(l:template, 'updated : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
+            call add(l:template, 'tags    : ')
+            call add(l:template, 'toc     : true')
+            call add(l:template, 'public  : true')
+            call add(l:template, '---')
+            call add(l:template, '* TOC')
+            call add(l:template, '{:toc}')
+            call add(l:template, '')
+            call add(l:template, '# ')
+            call setline(1, l:template)
+            execute 'normal! G'
+            execute 'normal! $'
 
-        let l:template = []
-        call add(l:template, '---')
-        call add(l:template, 'layout  : post')
-        call add(l:template, 'title   : ')
-        call add(l:template, 'summary : ')
-        call add(l:template, 'date    : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
-        call add(l:template, 'updated : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
-        call add(l:template, 'tags    : ')
-        call add(l:template, 'toc     : true')
-        call add(l:template, 'public  : true')
-        call add(l:template, '---')
-        call add(l:template, '* TOC')
-        call add(l:template, '{:toc}')
-        call add(l:template, '')
-        call add(l:template, '# ')
-        call setline(1, l:template)
-        execute 'normal! G'
-        execute 'normal! $'
+            echo 'new post page has created'
 
-        echo 'new post page has created'
-    endif
+        elseif(path == '_wiki')
+            let l:template = []
+            call add(l:template, '---')
+            call add(l:template, 'layout  : wiki')
+            call add(l:template, 'title   : ')
+            call add(l:template, 'summary : ')
+            call add(l:template, 'date    : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
+            call add(l:template, 'updated : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
+            call add(l:template, 'tags    : ')
+            call add(l:template, 'toc     : true')
+            call add(l:template, 'public  : true')
+            call add(l:template, 'parent  : ')
+            call add(l:template, 'latex   : false')
+            call add(l:template, '---')
+            call add(l:template, '* TOC')
+            call add(l:template, '{:toc}')
+            call add(l:template, '')
+            call add(l:template, '# ')
+            call setline(1, l:template)
+            execute 'normal! G'
+            execute 'normal! $'
 
-    if '/Users/idowon/IdeaProjects/leedo1982.github.io/_wiki' == expand('%:p:h')
+            echo 'new wiki page has created'
 
-        let l:template = []
-        call add(l:template, '---')
-        call add(l:template, 'layout  : wiki')
-        call add(l:template, 'title   : ')
-        call add(l:template, 'summary : ')
-        call add(l:template, 'date    : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
-        call add(l:template, 'updated : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
-        call add(l:template, 'tags    : ')
-        call add(l:template, 'toc     : true')
-        call add(l:template, 'public  : true')
-        call add(l:template, 'parent  : ')
-        call add(l:template, 'latex   : false')
-        call add(l:template, '---')
-        call add(l:template, '* TOC')
-        call add(l:template, '{:toc}')
-        call add(l:template, '')
-        call add(l:template, '# ')
-        call setline(1, l:template)
-        execute 'normal! G'
-        execute 'normal! $'
-
-        echo 'new wiki page has created'
-    endif
+        endif
+    endfor
 endfunction
 
 augroup vimwikiauto
