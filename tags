@@ -4,6 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+"	dotfiles/init.vim	/^    nnor" emap <LocalLeader>u :UndotreeToggle<cr>$/;"	m
 &	dotfiles/init.vim	/^    nnoremap & :&&<CR>$/;"	m
 &	dotfiles/vimConfig/vimSetting.vim	/^    nnoremap & :&&<CR>$/;"	m
 ) hs.reload	dotfiles/.hammerspoon/modules/vim.lua	/^    caps_mode:bind({'shift'}, 'r', function() hs.reload() end, vim_end)$/;"	f
@@ -51,7 +52,6 @@
 <LocalLeader>r	dotfiles/init.vim	/^    nnoremap <LocalLeader>r :RainbowToggle<CR>$/;"	m
 <LocalLeader>s	dotfiles/init.vim	/^    nmap <LocalLeader>s :Startify<CR>$/;"	m
 <LocalLeader>t	dotfiles/init.vim	/^    nnoremap <LocalLeader>t :TagbarToggle<CR>$/;"	m
-<LocalLeader>u	dotfiles/init.vim	/^    nnoremap <LocalLeader>u :UndotreeToggle<cr>$/;"	m
 <LocalLeader>w<LocalLeader>t	dotfiles/init.vim	/^    nmap <LocalLeader>w<LocalLeader>t <Plug>VimwikiTabMakeDiaryNote$/;"	m
 <LocalLeader>w<LocalLeader>w	dotfiles/init.vim	/^    nmap <LocalLeader>w<LocalLeader>w <Plug>VimwikiMakeDiaryNote$/;"	m
 <LocalLeader>w<LocalLeader>y	dotfiles/init.vim	/^    nmap <LocalLeader>w<LocalLeader>y <Plug>VimwikiMakeYesterdayDiaryNote$/;"	m
@@ -116,6 +116,7 @@ NERDTreeShowHidden	dotfiles/init.vim	/^    let NERDTreeShowHidden = 1 "Show hidd
 NERDTreeShowHidden	dotfiles/vimConfig/plugin.vim	/^let NERDTreeShowHidden=1$/;"	v
 Ncd	dotfiles/init.vim	/^command! Ncd :cd %:p:h$/;"	c
 Ncd	dotfiles/vimConfig/vimSetting.vim	/^    command! Ncd :cd %:p:h$/;"	c
+NewTemplate	dotfiles/init.vim	/^function! NewTemplate()$/;"	f
 ToHtml	dotfiles/init.vim	/^command! ToHtml :so $VIMRUNTIME\/syntax\/2html.vim$/;"	c
 ToggleNumber	dotfiles/init.vim	/^function! ToggleNumber()$/;"	f
 WikiIndex	dotfiles/init.vim	/^    command! WikiIndex :VimwikiIndex$/;"	c
@@ -281,6 +282,7 @@ vim_markdown_preview_hotkey	dotfiles/vimConfig/vimSetting.vim	/^let vim_markdown
 vim_markdown_preview_temp_file	dotfiles/vimConfig/vimSetting.vim	/^let vim_markdown_preview_temp_file=1$/;"	v
 vim_markdown_preview_toggle	dotfiles/vimConfig/vimSetting.vim	/^let vim_markdown_preview_toggle=1$/;"	v
 vim_markdown_preview_use_xdg_open	dotfiles/vimConfig/vimSetting.vim	/^let vim_markdown_preview_use_xdg_open=1$/;"	v
+vimwikiauto	dotfiles/init.vim	/^augroup vimwikiauto$/;"	a
 œ	dotfiles/vimConfig/vimSetting.vim	/^        nnoremap œ :bp <BAR> bd #<CR> " 현재 버퍼를 닫고 이전 버퍼로 이동$/;"	m
 ˚	dotfiles/vimConfig/vimSetting.vim	/^        nnoremap ˚ ddkP$/;"	m
 ˚	dotfiles/vimConfig/vimSetting.vim	/^        vnoremap ˚ xkP`[V`]$/;"	m

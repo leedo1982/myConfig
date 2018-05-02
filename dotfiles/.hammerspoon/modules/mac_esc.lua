@@ -1,7 +1,6 @@
 
 local normal_keyflag = false
 local control_keyflag = false
-local fnkeyflag = false
 
 -- 마우스 클릭 이벤트 구독 
 normal_mousedownevent = hs.eventtap.new({hs.eventtap.event.types.leftMouseDown},function(event)
@@ -25,17 +24,6 @@ normal_keydownevent = hs.eventtap.new({hs.eventtap.event.types.keyDown},function
         normal_keyflag = false
     end
 
-    if(fnkeyflag) then
-        if(keycode == 'h') then
-            event:setKeyCode(hs.keycodes.map['left'])
-        elseif(keycode == 'j') then
-            event:setKeyCode(hs.keycodes.map['down'])
-         elseif(keycode == 'k') then
-            event:setKeyCode(hs.keycodes.map['up'])
-        elseif(keycode == 'l') then
-            event:setKeyCode(hs.keycodes.map['right'])
-        end
-    end
 end)
 normal_keydownevent:start()
 
@@ -49,15 +37,11 @@ control_keyevent = hs.eventtap.new({hs.eventtap.event.types.flagsChanged},functi
         control_keyflag = false
     end
 
-    if(flags.fn == true) then
-        fnkeyflag = true
-    end
 
     if(keycode == 'rightctrl' and flags.ctrl == nil and normal_keyflag == false) then 
         print('rightCtrl & escape !!')
         changeLanguage()
         hs.eventtap.keyStroke({}, 'escape')
-        fnkeyflag = false
     end
 
     normal_keyflag = false
