@@ -2,49 +2,17 @@
 local normal_keyflag = false
 local control_keyflag = false
 
--- 마우스 클릭 이벤트 구독 
-normal_mousedownevent = hs.eventtap.new({hs.eventtap.event.types.leftMouseDown},function(event)
-    local keycode = hs.keycodes.map[event:getKeyCode()]
-    if(control_keyflag == true) then
-        normal_keyflag = true
-    elseif(control_keyflag == false) then
-        normal_keyflag = false
-    end
 
-end)
-normal_mousedownevent:start()
-
--- 키 다운 이벤트 구독 
-normal_keydownevent = hs.eventtap.new({hs.eventtap.event.types.keyDown},function(event)
-    local keycode = hs.keycodes.map[event:getKeyCode()]
-
-    if(control_keyflag == true) then
-        normal_keyflag = true
-    elseif(control_keyflag == false) then
-        normal_keyflag = false
-    end
-
-end)
-normal_keydownevent:start()
 
 control_keyevent = hs.eventtap.new({hs.eventtap.event.types.flagsChanged},function(event)
-    local flags = event:getFlags()
     local keycode = hs.keycodes.map[event:getKeyCode()]
 
-    if(flags.ctrl == true) then
-        control_keyflag = true
-    elseif(flags.ctrl == nil) then
-        control_keyflag = false
-    end
+        print('rightCtrl !'+ keycode)
 
-
-    if(keycode == 'rightctrl' and flags.ctrl == nil and normal_keyflag == false) then 
+    if(keycode == 'escape') then 
         print('rightCtrl & escape !!')
         changeLanguage()
-        hs.eventtap.keyStroke({}, 'escape')
     end
-
-    normal_keyflag = false
 
     return false
 end)
