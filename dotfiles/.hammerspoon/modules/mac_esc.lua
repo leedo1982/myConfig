@@ -15,7 +15,7 @@ normal_keydownevent = hs.eventtap.new({hs.eventtap.event.types.keyDown},function
     end
 
     if(keycode == "yen") then
-       -- hs.eventtap.keyStroke({}, )
+       -- hs.eventtap.keyStroke({},'1' )
     end
 
     
