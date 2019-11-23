@@ -10,4 +10,4 @@
 -- local mouse = require('modules.mouse'):init('f14')
 
 local chage_lang = require('modules.mac_esc')
-local clipboard = require('modules.clipboard')
+-- local clipboard = require('modules.clipboard')

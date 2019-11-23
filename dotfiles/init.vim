@@ -30,7 +30,7 @@ call plug#begin('~/.vim/plugged')
    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install.sh --clang-completer --system-libclang' }
    Plug 'junegunn/fzf.vim'
 
-    " editing
+   " editing
   Plug 'tpope/vim-surround'
   Plug 'bling/vim-airline'           " BUFFER navigator, status line 을 제공한다.
   Plug 'vim-airline/vim-airline-themes'
@@ -69,6 +69,8 @@ syntax enable
 
 "syntax on
 filetype plugin indent on " Put your non-Plugin stuff after this line
+
+filetype plugin on " Put your non-Plugin stuff after this line
 
 " set ----------------------------------------------------------------------
 
@@ -523,6 +525,8 @@ command! Ncd :cd %:p:h
 " If buffer modified, update any 'Last modified: ' in the first 20 lines.
 " 'Last modified: ' can have up to 10 characters before (they are retained).
 " Restores cursor and window position using save_cursor variable.
+"
+"
 function! LastModified()
     if g:md_modify_disabled
     echo('dont markdown updated time modified')
@@ -597,8 +601,8 @@ function! NewTemplate()
 endfunction
 
 augroup vimwikiauto
-    autocmd BufWritePre *.md call LastModified()
-    autocmd BufRead,BufNewFile *.md call NewTemplate()
+   autocmd BufWritePre *.md call LastModified()
+   autocmd BufRead,BufNewFile *.md call NewTemplate()
 augroup END
 
 let g:md_modify_disabled = 0
