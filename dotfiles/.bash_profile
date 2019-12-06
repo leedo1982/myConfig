@@ -20,3 +20,5 @@ export PATH="/usr/local/Cellar/node/9.3.0_1/bin:$PATH"
 export M2_HOME=/usr/local/apache-maven/apache-maven-3.5.2
 export M2=$M2_HOME/bin
 export PATH=$M2:$PATH
+export GOPATH=$HOME/go
+
