@@ -558,7 +558,7 @@ function! NewTemplate()
             call add(l:template, 'summary : ')
             call add(l:template, 'date    : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
             call add(l:template, 'updated : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
-            call add(l:template, 'tags    : ')
+            call add(l:template, 'tag     : ')
             call add(l:template, 'toc     : true')
             call add(l:template, 'public  : true')
             call add(l:template, '---')
@@ -580,7 +580,7 @@ function! NewTemplate()
             call add(l:template, 'summary : ')
             call add(l:template, 'date    : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
             call add(l:template, 'updated : ' . strftime('%Y-%m-%d %H:%M:%S +0900'))
-            call add(l:template, 'tags    : ')
+            call add(l:template, 'tag     : ')
             call add(l:template, 'toc     : true')
             call add(l:template, 'public  : true')
             call add(l:template, 'parent  : ')
@@ -616,5 +616,11 @@ let g:md_modify_disabled = 0
 "  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 "  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 "endif
+"
+let wiki = {}
+let wiki.path = '/Users/idowon/Library/Mobile Documents/com~apple~CloudDocs/projectDowon/leedo1982.github.io/_wiki'
+let wiki.ext = '.md'
 
+let g:vimwiki_list = [wiki]
+let g:vimwiki_conceallevel = 0
 
